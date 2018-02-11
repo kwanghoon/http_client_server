@@ -1,0 +1,71 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 192352384064a9bf241379dd99c4e0522fb7324300edc4b67c127be8e75fce81
+
+name:           http-demo
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/http-demo#readme>
+homepage:       https://github.com/githubuser/http-demo#readme
+bug-reports:    https://github.com/githubuser/http-demo/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/http-demo
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , network
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_http_demo
+  default-language: Haskell2010
+
+executable http-demo-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-demo
+    , network
+  other-modules:
+      Paths_http_demo
+  default-language: Haskell2010
+
+test-suite http-demo-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-demo
+    , network
+  other-modules:
+      Paths_http_demo
+  default-language: Haskell2010
